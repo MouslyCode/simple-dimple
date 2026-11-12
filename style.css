@@ -1,0 +1,204 @@
+    /* ===== Variabel warna & ukuran ===== */
+    :root {
+      --bg: #f7f9fb;
+      --surface: #ffffff;
+      --text: #1b2430;
+      --muted: #5b6676;
+      --line: #dfe5ec;
+      --accent: #1f5eff;
+      --accent-dark: #1647c4;
+      --radius: 12px;
+      --max: 960px;
+    }
+
+    /* ===== Reset sederhana ===== */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+    body {
+      margin: 0;
+      font-family: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text);
+      background: var(--bg);
+    }
+    h1, h2, h3 { line-height: 1.25; margin: 0; }
+    p { margin: 0; }
+    a { color: var(--accent); }
+
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+
+    /* ===== Layout umum ===== */
+    .container {
+      width: min(100% - 2.5rem, var(--max));
+      margin-inline: auto;
+    }
+    main section { padding: 4rem 0; }
+    main section + section { border-top: 1px solid var(--line); }
+    .section-title { font-size: 1.75rem; font-weight: 800; margin-bottom: 1.5rem; }
+
+    /* ===== Header & navigasi ===== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(247, 249, 251, 0.92);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--line);
+    }
+    .site-header .container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem 1.5rem;
+      padding-block: 0.9rem;
+    }
+    .brand {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .site-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.25rem 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .site-nav a {
+      color: var(--muted);
+      font-weight: 500;
+      text-decoration: none;
+      padding-block: 0.25rem;
+      border-bottom: 2px solid transparent;
+    }
+    .site-nav a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    /* ===== Hero ===== */
+    .hero { padding: 5rem 0 4rem; }
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 3.5rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      max-width: 16ch;
+    }
+    .hero p {
+      margin-top: 1.25rem;
+      max-width: 52ch;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+    .button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.8rem 1.6rem;
+      background: var(--accent);
+      color: #fff;
+      font: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      border: 0;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .button:hover { background: var(--accent-dark); }
+
+    /* ===== Tentang saya ===== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .about-text p { max-width: 62ch; color: var(--muted); }
+    .about-text p + p { margin-top: 1rem; }
+    .facts { margin: 0; }
+    .facts div {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .facts div:first-child { padding-top: 0; }
+    .facts dt { font-size: 0.9rem; color: var(--muted); }
+    .facts dd { margin: 0; font-weight: 700; }
+
+    /* ===== Keterampilan ===== */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+    .skill-group {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+    .skill-group h3 { font-size: 1.1rem; margin-bottom: 0.9rem; }
+    .skill-group ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .skill-group li {
+      padding: 0.3rem 0.8rem;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--accent-dark);
+      background: #eaf0ff;
+      border-radius: 999px;
+    }
+
+    /* ===== Formulir kontak ===== */
+    .contact-intro { max-width: 52ch; color: var(--muted); margin-bottom: 2rem; }
+    .contact-form { display: grid; gap: 1.25rem; max-width: 560px; }
+    .field { display: grid; gap: 0.4rem; }
+    .field label { font-weight: 700; font-size: 0.95rem; }
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: 0.75rem 0.9rem;
+      font: inherit;
+      color: var(--text);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+    .field textarea { min-height: 9rem; resize: vertical; }
+    .field input:focus,
+    .field textarea:focus {
+      outline: 3px solid rgba(31, 94, 255, 0.3);
+      border-color: var(--accent);
+    }
+    .contact-form .button { margin-top: 0; justify-self: start; }
+
+    /* ===== Footer ===== */
+    .site-footer {
+      padding: 2rem 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* ===== Responsive ===== */
+    @media (min-width: 720px) {
+      .about-grid { grid-template-columns: 2fr 1fr; gap: 4rem; }
+      .skills-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 480px) {
+      main section { padding: 3rem 0; }
+      .hero { padding: 3rem 0 2.5rem; }
+    }

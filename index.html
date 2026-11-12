@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Profil Reza, mahasiswa Ilmu Komputer yang tertarik pada IT support dan infrastruktur.">
+  <title>Mously Code | Profil</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#beranda">Mously Code</a>
+      <nav class="site-nav" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#keterampilan">Keterampilan</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="beranda">
+    <section class="hero" aria-labelledby="judul-hero">
+      <div class="container">
+        <h1 id="judul-hero">Halo, saya Reza.</h1>
+        <p>Mahasiswa Ilmu Komputer yang sedang belajar jaringan, pemrograman, dan infrastruktur IT.</p>
+        <a class="button" href="#kontak">Hubungi saya</a>
+      </div>
+    </section>
+
+    <section id="tentang" aria-labelledby="judul-tentang">
+      <div class="container">
+        <h2 class="section-title" id="judul-tentang">Tentang saya</h2>
+        <div class="about-grid">
+          <article class="about-text">
+            <p>Saya mahasiswa semester pertama Ilmu Komputer di Indonesia. Saat ini saya mempelajari jaringan komputer,
+              algoritma, struktur data, serta komputasi paralel dan terdistribusi.</p>
+            <p>Saya tertarik pada pekerjaan IT support dan infrastruktur. Dalam belajar, saya lebih mengutamakan
+              pemahaman konsep daripada hasil instan.</p>
+          </article>
+          <dl class="facts">
+            <div>
+              <dt>Pendidikan</dt>
+              <dd>Ilmu Komputer, semester 1</dd>
+            </div>
+            <div>
+              <dt>Lokasi</dt>
+              <dd>Jawa Timur, Indonesia</dd>
+            </div>
+            <div>
+              <dt>Minat</dt>
+              <dd>IT support &amp; infrastruktur</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section id="keterampilan" aria-labelledby="judul-keterampilan">
+      <div class="container">
+        <h2 class="section-title" id="judul-keterampilan">Keterampilan</h2>
+        <div class="skills-grid">
+          <article class="skill-group">
+            <h3>Sistem &amp; Jaringan</h3>
+            <ul>
+              <li>Linux</li>
+              <li>Docker</li>
+              <li>Cisco Packet Tracer</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Pemrograman</h3>
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Python</li>
+            </ul>
+          </article>
+          <article class="skill-group">
+            <h3>Dasar Ilmu Komputer</h3>
+            <ul>
+              <li>Algoritma</li>
+              <li>Struktur data</li>
+              <li>Komputasi paralel</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontak" aria-labelledby="judul-kontak">
+      <div class="container">
+        <h2 class="section-title" id="judul-kontak">Kontak</h2>
+        <p class="contact-intro">Ada pertanyaan atau ingin berdiskusi? Isi formulir di bawah ini.</p>
+        <form class="contact-form" action="#" method="post">
+          <div class="field">
+            <label for="nama">Nama</label>
+            <input type="text" id="nama" name="nama" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div class="field">
+            <label for="pesan">Pesan</label>
+            <textarea id="pesan" name="pesan" required></textarea>
+          </div>
+          <button class="button" type="submit">Kirim pesan</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Mously Code. Dibuat dengan HTML dan CSS.</p>
+    </div>
+  </footer>
+
+</body>
+
+</html>
