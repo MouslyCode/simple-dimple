@@ -28,6 +28,21 @@
 
     .required { font-weight: 500; color: var(--muted); }
 
+    .skip-link {
+    position: absolute;
+    top: -4rem;
+    left: 1rem;
+    z-index: 20;
+    padding: 0.6rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: var(--radius);
+    }
+    .skip-link:focus { top: 1rem; }
+
+
     :focus-visible {
       outline: 3px solid var(--accent);
       outline-offset: 3px;
@@ -201,7 +216,7 @@
       background: var(--surface);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-    }
+    }    
     .field textarea { min-height: 9rem; resize: vertical; }
     .field input:focus,
     .field textarea:focus {
