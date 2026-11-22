@@ -9,6 +9,7 @@
       --accent-dark: #1647c4;
       --radius: 12px;
       --max: 960px;
+      --border-input: #8a94a3;
     }
 
     /* ===== Reset sederhana ===== */
@@ -214,7 +215,7 @@
       font: inherit;
       color: var(--text);
       background: var(--surface);
-      border: 1px solid var(--line);
+      border: 1px solid var(--border-input);
       border-radius: var(--radius);
     }    
     .field textarea { min-height: 9rem; resize: vertical; }
