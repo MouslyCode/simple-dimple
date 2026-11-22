@@ -45,6 +45,29 @@
     main section + section { border-top: 1px solid var(--line); }
     .section-title { font-size: 1.75rem; font-weight: 800; margin-bottom: 1.5rem; }
 
+.photo-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  width: min(100% - 2.5rem, var(--max));
+  margin-inline: auto;
+}
+
+.photo-layout .container {
+  width: auto;
+  margin-inline: 0;
+}
+
+.photo-layout img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+}
+
     /* ===== Header & navigasi ===== */
     .site-header {
       position: sticky;
@@ -197,6 +220,10 @@
     @media (min-width: 720px) {
       .about-grid { grid-template-columns: 2fr 1fr; gap: 4rem; }
       .skills-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .photo-layout {flex-direction: column;}
     }
     @media (max-width: 480px) {
       main section { padding: 3rem 0; }
