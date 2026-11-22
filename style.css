@@ -26,6 +26,8 @@
     p { margin: 0; }
     a { color: var(--accent); }
 
+    .required { font-weight: 500; color: var(--muted); }
+
     :focus-visible {
       outline: 3px solid var(--accent);
       outline-offset: 3px;
